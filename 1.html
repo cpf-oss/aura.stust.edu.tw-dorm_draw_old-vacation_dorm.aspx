@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    text-align: center; /* 將整個內容置中 */
+  }
+
+  .input-container {
+    margin: 10px auto;
+    width: 150px; /* 增加寬度以容納輸入框和標籤 */
+    text-align: left;
+    font-family: Arial, sans-serif;
+    position: relative; /* 讓內容可以定位 */
+  }
+
+  .input-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(100% + 10px); /* 將標籤定位到輸入框的右邊 */
+    font-weight: bold;
+    color: #666;
+    white-space: nowrap; /* 防止文本換行 */
+  }
+
+  .input-field {
+    width: calc(100%); /* 讓輸入框充滿父容器的寬度，並留出一些空間給標籤 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 0; /* 設置輸入框的 z-index 為 0 */
+  }
+
+  .image-container {
+    text-align: center; /* 將圖片置中 */
+    margin-top: 20px; /* 上邊距 */
+  }
+
+  .centered-image {
+    display: inline-block;
+    max-width: 100%; /* 最大寬度 */
+    height: auto; /* 自動調整高度 */
+  }
+
+  /* 登入按鈕的樣式 */
+  .input-container button[type="submit"] {
+    display: block;
+    width: 60%; /* 按鈕寬度 */
+    margin: 10px auto 0; /* 上邊距、下邊距置中 */
+    padding: 10px;
+    border: none;
+    border-radius: 10px; /* 圓角 */
+    background-color: #4c8baf; /* 水藍色 */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 漸變效果 */
+  }
+
+  /* 按鈕懸停時的效果 */
+  .input-container button[type="submit"]:hover {
+    background-color: #45a049; /* 深一點的水藍色 */
+  }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="123.jpg" alt="Trulli" class="centered-image">
+</div>
+
+<form id="login-form" onsubmit="redirectToWebsite(event)">
+  <div class="input-container">
+    <input type="text" id="student-id" name="student-id" class="input-field">
+    <div class="input-label">帳號 Student ID：</div>
+  </div>
+
+  <div class="input-container">
+    <input type="password" id="password" name="password" class="input-field">
+    <div class="input-label">密碼 Password：</div>
+  </div>
+
+  <div class="input-container">
+    <button type="submit">登入login</button>
+  </div>
+</form>
+
+<div class="image-container">
+  <img src="456.jpg" alt="Trulli" class="centered-image">
+</div>
+
+<script>
+function redirectToWebsite(event) {
+  event.preventDefault(); // 阻止表單提交
+  window.location.href = 'https://cpf-oss.github.io/aura.stust.edu.tw-dorm_draw_old-vacation_dorm1.aspx/2.html'; // 重定向到目標網站
+}
+</script>
+</body>
+</html>
